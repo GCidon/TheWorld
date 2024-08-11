@@ -1,0 +1,153 @@
+[gd_scene load_steps=25 format=3 uid="uid://bvfycmspsl74o"]
+
+[ext_resource type="Script" path="res://Scripts/Touch.gd" id="2_3ebwx"]
+[ext_resource type="Texture2D" uid="uid://c7nuci3ku46uo" path="res://Assets/Sprites/sphere.png" id="2_bki4y"]
+[ext_resource type="Texture2D" uid="uid://dxa6bmcphqp3v" path="res://Assets/black.png" id="3_ce056"]
+[ext_resource type="Script" path="res://Scripts/camara.gd" id="3_ear84"]
+[ext_resource type="Script" path="res://Scripts/daycounter.gd" id="5_c8uxt"]
+[ext_resource type="Script" path="res://Scripts/panel.gd" id="5_rkao7"]
+[ext_resource type="Resource" uid="uid://cgopcgagob60p" path="res://Scriptables/Random.tres" id="6_qu6kk"]
+[ext_resource type="Resource" uid="uid://83uim0st2hd1" path="res://Scriptables/Guerra.tres" id="7_g6c32"]
+[ext_resource type="Resource" uid="uid://dddorq346tndm" path="res://Scriptables/Rosa.tres" id="8_btqo5"]
+[ext_resource type="Resource" uid="uid://dhnj836wmr47s" path="res://Scriptables/Personal.tres" id="9_tj58c"]
+[ext_resource type="Script" path="res://Scripts/typingtext.gd" id="10_hdsmf"]
+[ext_resource type="Texture2D" uid="uid://bwchm6i8g327r" path="res://Assets/Sprites/reporter.png" id="10_lem5b"]
+[ext_resource type="Resource" uid="uid://b5xummwrpub7t" path="res://Scriptables/Indies.tres" id="10_lvlwc"]
+[ext_resource type="Script" path="res://Scripts/reportero.gd" id="11_g0o81"]
+[ext_resource type="Resource" uid="uid://bm7yiubsc5087" path="res://Scriptables/EndGame.tres" id="11_lglmo"]
+[ext_resource type="AudioStream" uid="uid://bq6vyck6aik4w" path="res://Assets/Sound/typewriter.ogg" id="14_32eiw"]
+[ext_resource type="AudioStream" uid="uid://ceh2y1ar2ilsb" path="res://Assets/Sound/sin nombre.wav" id="16_lhmfl"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kerwk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oaln2"]
+albedo_texture = ExtResource("2_bki4y")
+
+[sub_resource type="SphereMesh" id="SphereMesh_nu8t6"]
+lightmap_size_hint = Vector2i(17, 9)
+material = SubResource("StandardMaterial3D_oaln2")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_845iq"]
+panorama = ExtResource("3_ce056")
+
+[sub_resource type="Sky" id="Sky_v36fs"]
+sky_material = SubResource("PanoramaSkyMaterial_845iq")
+
+[sub_resource type="Environment" id="Environment_ao1gm"]
+background_mode = 2
+sky = SubResource("Sky_v36fs")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.05
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7y7m7"]
+atlas = ExtResource("10_lem5b")
+region = Rect2(0, 0, 128, 128)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldNode" type="Node3D" parent="."]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="WorldNode"]
+gravity_scale = 0.0
+script = ExtResource("2_3ebwx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldNode/RigidBody3D"]
+shape = SubResource("SphereShape3D_kerwk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldNode/RigidBody3D"]
+mesh = SubResource("SphereMesh_nu8t6")
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("world")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.32786)
+environment = SubResource("Environment_ao1gm")
+script = ExtResource("3_ear84")
+world = NodePath("../WorldNode")
+
+[node name="Timer" type="Timer" parent="Camera3D"]
+wait_time = 5.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.03943)
+light_energy = 0.5
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI" node_paths=PackedStringArray("noticiaLabel")]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -476.0
+offset_top = -140.0
+offset_right = 24.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("5_rkao7")
+noticiasRandom = ExtResource("6_qu6kk")
+noticiasGuerra = ExtResource("7_g6c32")
+noticiasRosa = ExtResource("8_btqo5")
+noticiasPersonal = ExtResource("9_tj58c")
+noticiasIndie = ExtResource("10_lvlwc")
+noticiasEnd = ExtResource("11_lglmo")
+noticiaLabel = NodePath("HBoxContainer/Label")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = SubResource("AtlasTexture_7y7m7")
+script = ExtResource("11_g0o81")
+
+[node name="next_frame" type="Timer" parent="UI/Panel/HBoxContainer/TextureRect"]
+wait_time = 0.1
+
+[node name="Label" type="Label" parent="UI/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+text = "aaaaaaaa"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("10_hdsmf")
+
+[node name="next_char" type="Timer" parent="UI/Panel/HBoxContainer/Label"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI/Panel/HBoxContainer/Label"]
+stream = ExtResource("14_32eiw")
+volume_db = -20.348
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 120.0
+offset_bottom = 70.0
+text = "Día 1"
+script = ExtResource("5_c8uxt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_lhmfl")
+autoplay = true
+
+[connection signal="timeout" from="Camera3D/Timer" to="Camera3D" method="_on_timer_timeout"]
+[connection signal="timeout" from="UI/Panel/HBoxContainer/TextureRect/next_frame" to="UI/Panel/HBoxContainer/TextureRect" method="_on_next_frame_timeout"]
+[connection signal="timeout" from="UI/Panel/HBoxContainer/Label/next_char" to="UI/Panel/HBoxContainer/Label" method="_on_next_char_timeout"]

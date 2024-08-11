@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Noticiero" load_steps=2 format=3 uid="uid://83uim0st2hd1"]
+
+[ext_resource type="Script" path="res://Scriptables/noticias.gd" id="1_tr1rq"]
+
+[resource]
+script = ExtResource("1_tr1rq")
+titulares = Array[String](["La tensión aumenta entre gobernantes de países cercanos debido a la posición de una línea imaginaria.", "\"Este trozo de tierra es nuestro por derecho divino\", grita un señor que vive a 300km del territorio.", "El país más adinerado empieza a movilizar una cantidad cómicamente grande de tropas a la frontera, advierten espías extranjeros.", "Guerrilleros locales equipados con armas de última tecnología comienzan revueltas en todo el país.", "Comienzan a caer las primeras bombas sobre territorio claramente civil. \"En algún sitio estarán los malos, supongo\", declara líder nacional.", "\"Me gusta decapitar personas aleatorias\" y otros mensajes que puede que preocupen a más de uno.", "La Organización Mundial de la Paz Complemente Asegurada sigue planteándose si debería, por lo menos, decir algo.", "Dos vecinos al otro lado del globo se matan a puños tras discutir cuál asesino es más asesino.", "La guerra continúa en... Última hora: John Socker es fichado por el BigTown FC por el precio de dos megazillones de dólares.", "Decenas de miles de muertos a causa de esta guerra, pero el mundo sigue girando, supongo."])
+color = Color(1, 0, 0, 1)

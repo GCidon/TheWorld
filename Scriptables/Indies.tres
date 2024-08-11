@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Noticiero" load_steps=2 format=3 uid="uid://b5xummwrpub7t"]
+
+[ext_resource type="Script" path="res://Scriptables/noticias.gd" id="1_ug53t"]
+
+[resource]
+script = ExtResource("1_ug53t")
+titulares = Array[String](["Grupo de jugadores coinciden en clase. Discuten sobre el equipo de e-sports de moda.", "Debido a las grandes corporaciones y el paso del tiempo, los videojuegos dejan de ser divertidos.", "Pequeñas células de desarrolladores comienzan a crear pequeños videojuegos sin recibir un duro.", "Sorpresa, sorpresa: científicos demuestran que el comprador habitual de FIFA no quiere gastarse 15 pavos en un juego de un don-nadie.", "La comunidad de desarrolladores indie crece a niveles inversamente proporcionales a los puestos de trabajo en la industria.", "El último juego indie de moda es replicado por cientos de estudios. El plagio se disfraza de inspiración.", "Las game-jams se reinventan: Ahora los ganadores se deciden por número de ventas en Steam.", "\"¿Por qué ya nadie quiere jugar mis juegos?\" Se pregunta Richie McRich, tras publicar la decimosexta entrega de su saga.", "La luz al final del túnel. Los game developers descubren que tal vez lo mejor sería disfrutar antes que agobiarse.", "Un niño sonríe al jugar su juego favorito. El mundo sigue girando."])
+color = Color(1, 1, 0, 1)

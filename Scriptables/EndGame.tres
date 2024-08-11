@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Noticiero" load_steps=2 format=3 uid="uid://bm7yiubsc5087"]
+
+[ext_resource type="Script" path="res://Scriptables/noticias.gd" id="1_ows5n"]
+
+[resource]
+script = ExtResource("1_ows5n")
+titulares = Array[String](["Pequeño juego reflexivo ha terminado. Gracias por jugar."])
+color = Color(1, 1, 1, 1)

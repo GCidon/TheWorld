@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Noticiero" load_steps=2 format=3 uid="uid://dddorq346tndm"]
+
+[ext_resource type="Script" path="res://Scriptables/noticias.gd" id="1_57g1m"]
+
+[resource]
+script = ExtResource("1_57g1m")
+titulares = Array[String](["LALA REINA y PAOLO MORENO, vistos de la MANO después de sus actuaciones en \"Adivina quién soy cantando\".", "La inesperada PAREJA, ya OFICIAL, viaja a algún país que sólo has visto en historias de Instagram.", "Saltó la LIEBRE: Se descubre HIJO PERDIDO de PAOLO, sólo meses antes de su BODA.", "INFIDELIDAD en el paraíso. LALA REINA BESÁNDOSE con un misterioso DESCONOCIDO en FORMENTERA. ", "Tú a BALI y yo a los JUZGADOS: la ex-pareja recurre a los TRIBUNALES para obtener la custodia de sus PERROS.", "¿LALA REINA LLORANDO? La famosa cantante rompe en LÁGRIMAS frente a miles de personas en DIRECTO.", "De FLOR en FLOR: Paolo PRESUNTAMENTE ha podido volver con su pareja del instituto. ¿Se ha vuelto a avivar la LLAMA?", "LALA REINA vuelve a SONREÍR. Se la ha visto con su familia en SU CASA, comiendo y haciendo cosas normales, vaya. ", "¿REENCUENTRO EMOTIVO? Lala Reina y Paolo Moreno se reencuentran. Se SALUDAN y CHARLAN normalmente, como personas que han sabido ser adultas.", "El AMOR siempre, pese a todas las circunstancias, TRIUNFA. El mundo sigue girando."])
+color = Color(1, 0, 1, 1)

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Noticiero" load_steps=2 format=3 uid="uid://dhnj836wmr47s"]
+
+[ext_resource type="Script" path="res://Scriptables/noticias.gd" id="1_hvhwf"]
+
+[resource]
+script = ExtResource("1_hvhwf")
+titulares = Array[String](["Hoy, en primer plano: El reflejo de una persona anónima y su aparente mínima influencia.", "La confusión aumenta en tus ideales debido a las contradicciones que inculca el entorno.", "El comentario que te han hecho esta mañana afecta gravemente a tu humor durante los próximos meses.", "¿Por qué se terminan las relaciones? Esta y muchas más preguntas, hoy, en tu ducha local.", "El síndrome del impostor: Síntomas y causas. El sujeto de hoy: Aquel que esté leyendo esto, probablemente.", "Quién lo diría: Estar con la gente a la que quieres te hace feliz. Científicos recomiendan hacerlo más a menudo.", "Han pasado años desde la última vez que tomaste sustancias malas para tu cuerpo. Estás mejor que nunca.", "Un día más que accedes a una red social, un día más que estás de mal humor por un comentario anónimo.", "Descubres un nuevo género musical que te encanta. Te pasas todo el día escuchándolo. Te hace feliz por ningún motivo.", "Pese a todo, sigues siendo tú. El mundo sigue girando."])
+color = Color(0, 1, 0, 1)

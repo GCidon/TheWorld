@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvfycmspsl74o"]
+
+[ext_resource type="Texture2D" uid="uid://dmx2nkn6hs0gr" path="res://Assets/Water.png" id="1_nrr1g"]
+[ext_resource type="Script" path="res://Scripts/Touch.gd" id="2_3ebwx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kerwk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oaln2"]
+albedo_texture = ExtResource("1_nrr1g")
+
+[sub_resource type="SphereMesh" id="SphereMesh_nu8t6"]
+material = SubResource("StandardMaterial3D_oaln2")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldNode" type="Node3D" parent="."]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="WorldNode"]
+gravity_scale = 0.0
+script = ExtResource("2_3ebwx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldNode/RigidBody3D"]
+shape = SubResource("SphereShape3D_kerwk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldNode/RigidBody3D"]
+mesh = SubResource("SphereMesh_nu8t6")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.32786)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.22773)

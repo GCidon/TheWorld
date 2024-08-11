@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Noticiero" load_steps=2 format=3 uid="uid://cgopcgagob60p"]
+
+[ext_resource type="Script" path="res://Scriptables/noticias.gd" id="1_rmjel"]
+
+[resource]
+script = ExtResource("1_rmjel")
+titulares = Array[String](["Perro local es elegido presidente de la nación. De alguna manera, la economía y los valores sociales van mejor que nunca.", "Loco consigue generar cinco hectabillones de galletas por segundo. Sigue sin conocerse la localización de dichas galletas.", "¿Un árbol que produce bolsas de dinero? Así es como un grupo de animales ha conseguido este milagro de la naturaleza.", "Un grupo de jóvenes farmacéuticos inventa una pastilla que cura la gripe. Si, la gripe común. La que todavía no se había tratado por algún motivo desconocido.", "Celebridad de internet dice una tontería en directo. Miles de espectadores creen que dicha tontería es la realidad.", "sagfsad okhgfjh dsavgsa vcnbnbnb kjhgjhkhjkhwdsa cxmcxmnvcxnb ñllñhp", "Pedimos perdón por una de nuestras noticias anteriores. El gato de uno de los cámaras se había adueñado del teleprómpter.", "Genio de la física pide \"porfi porfi porfi\" que le permitan construir un acelerador de partículas más grande. \"Esta es la última, os lo prometo.\"", "Se ha aumentado el uso de los teléfonos móviles un infinito por cierto desde el día de su creación.", "Pasan cosas en todas partes todo el tiempo. El mundo sigue girando."])
+color = Color(1, 1, 1, 1)
